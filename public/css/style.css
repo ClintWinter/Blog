@@ -1,0 +1,94 @@
+*:not(.fa):not(h1):not(h2):not(h3) {
+	font-family: "Open Sans";
+}
+
+h1, h1, h3 {
+	font-family: "Old Standard TT", "serif" !important;
+}
+
+h1 *:not(.fa),
+h2 *:not(.fa),
+h3 *:not(.fa) {
+	font-family: "Old Standard TT", "serif" !important;
+}
+
+main.container {
+	padding-bottom: 7em;
+}
+
+.navbar-inverse {
+	border-radius: 0;
+}
+
+.navbar-brand {
+	padding: 10px 15px;
+}
+
+.navbar-brand img {
+	height: 30px;
+}
+
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.posts .thumbnail-container {
+	margin: 0 10px;
+}
+
+.posts .thumbnail {
+	padding: 0;
+	margin: 0;
+}
+
+.posts .thumbnail .title {
+	text-transform: capitalize;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+.posts .thumbnail .date {
+	color: #bbb;
+	font-size: 0.8em;
+}
+
+.posts .thumbnail .body {
+	margin: 20px 0;
+}
+
+.posts .thumbnail .creator {
+	font-style: italic;
+}
+
+.posts .thumbnail hr {
+	margin: 0.5em 0;
+}
+
+.show .title {
+	text-transform: capitalize;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+/*.show .date {
+	color: #999;
+	font-size: 1.2em;
+}*/
+
+.show .body:first-letter {
+	font-size: 3em;
+	color: red;
+	text-transform: capitalize;
+	font-family: "Old Standard TT", "serif";
+}
+
+.show .body {
+	margin-top: 50px;
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+
+.inline {
+	display: inline;
+}

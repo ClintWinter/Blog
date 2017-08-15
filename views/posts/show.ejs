@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 show">
+	<img class="img-responsive" src="<%=post.thumbnail%>" alt="">
+	<h1 class="title"><%=post.title%></h1>
+	<h4 class="date">By <%=post.author.username%> <small><%=post.created.toDateString()%></small></h4>
+	<% if (currentUser && post.author.id.equals(currentUser.id)) { %>
+	<a href="/posts/<%=post.id%>/edit" class="btn btn-warning btn-xs">Edit</a>
+	<form class="inline" action="/posts/<%=post.id%>?_method=DELETE" method="POST">
+		<input class="btn btn-danger btn-xs" type="submit" value="Delete">
+	</form>
+	<% } %>
+	<hr>
+	<div class="body">
+		<%-post.body%>
+	</div>
+</div>
+
+<% include ../partials/footer %>
