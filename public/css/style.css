@@ -116,6 +116,10 @@ main.container {
 	line-height: 1.8em;
 }
 
+.show .body p {
+	margin: 0 0 20px;
+}
+
 .inline {
 	display: inline;
 }

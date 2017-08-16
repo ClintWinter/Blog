@@ -6,7 +6,7 @@
 	<h4 class="date">By <%=post.author.username%> <small><%=post.created.toDateString()%></small></h4>
 	<% if (currentUser && post.author.id.equals(currentUser.id)) { %>
 	<a href="/posts/<%=post.id%>/edit" class="btn btn-warning btn-xs">Edit</a>
-	<form class="inline" action="/posts/<%=post.id%>?_method=DELETE" method="POST">
+	<form class="inline pull-right" action="/posts/<%=post.id%>?_method=DELETE" method="POST">
 		<input class="btn btn-danger btn-xs" type="submit" value="Delete">
 	</form>
 	<% } %>

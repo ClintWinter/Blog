@@ -20,6 +20,7 @@ app.use(override("_method"));
 app.use(flash());
 
 // PASSPORT
+console.log(config.secret);
 app.use(require("express-session")({
 	secret: config.secret,
 	resave: false,
