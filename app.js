@@ -7,7 +7,7 @@ var LocalStrategy = require("passport-local");
 var flash = require("connect-flash");
 var Post = require("./models/post");
 var User = require("./models/user");
-var config = require("./config");
+// var config = require("./config");
 var app = express();
 
 // CONFIG
@@ -22,7 +22,7 @@ app.use(flash());
 
 // PASSPORT
 app.use(require("express-session")({
-	secret: config.secret,
+	secret: process.env.SECRET,
 	resave: false,
 	saveUninitialized: false
 }));
