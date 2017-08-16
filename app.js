@@ -45,6 +45,6 @@ var indexRoutes = require("./routes");
 app.use('/posts', postRoutes);
 app.use('/', indexRoutes);
 
-app.listen(3000, 'localhost', function() {
+app.listen(process.env.PORT, process.env.IP, function() {
 	console.log('server listening...');
 });
