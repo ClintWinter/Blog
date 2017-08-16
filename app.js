@@ -24,7 +24,7 @@ app.use(flash());
 
 // PASSPORT
 app.use(require("express-session")({
-	secret: "Here is a very long sentence that I need for setting up the secret.",
+	secret: process.env.SECRET,
 	resave: false,
 	saveUninitialized: false
 }));
