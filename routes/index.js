@@ -20,13 +20,13 @@ router.post('/login', passport.authenticate("local", {
 	failureFlash: "Invalid username or password."
 }), function(req, res) {});
 
-router.get('/signup', middleware.isAdmin, function(req, res) {
+router.get('/signup', function(req, res) {
 	res.render('signup');
 });
 
-router.post("/signup", middleware.isAdmin, function(req, res) {
+router.post("/signup", function(req, res) {
 	req.logout();
-	var newUser = new User({username: req.body.username, admin: false});
+	var newUser = new User({username: req.body.username, admin: true});
 	User.register(newUser, req.body.password, function(err, user) {
 		if (err) {
 			req.flash("error", err.message);

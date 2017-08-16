@@ -45,13 +45,11 @@
 	        <% } %>
 	          <ul class="dropdown-menu">
 	            <% if (currentUser) { %>
-	            <% if (currentUser.admin) { %>
-	            <li><a href="/signup"><i class="fa fa-user-plus"></i> New User</a></li>
-	            <li role="separator" class="divider"></li>
-	            <% } %>
 	            <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
 	            <% } else { %>
 	            <li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="/signup"><i class="fa fa-user-plus"></i> New User</a></li>
 	            <% } %>
 	          </ul>
 	        </li>
