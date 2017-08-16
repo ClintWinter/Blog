@@ -6,7 +6,7 @@ var passport = require("passport");
 var m = require("../middleware");
 
 // index
-router.get('/', m.loggedIn, function(req, res) {
+router.get('/', function(req, res) {
 	Post.find({}, function(err, posts) {
 		if (err) {
 			req.flash('error', err);

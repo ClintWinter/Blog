@@ -1,5 +1,28 @@
-<% include partials/header %>
+<!doctype html>
+<html lang="en">
 
-<h1>Home</h1>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<% include partials/footer %>
+  <title>Clint's Blog</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+
+	<div class="container-fluid landing">
+		<h1>Clint's Blog</h1>
+		<% if (currentUser) { %>
+		<p><a href="/posts" class="btn btn-default btn-lg">View Posts</a></p>
+		<% } else { %>
+		<p><a href="/login" class="btn btn-default btn-lg">Login</a></p>
+		<% } %>
+	</div>
+
+</body>
+</html>

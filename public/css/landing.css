@@ -1,0 +1,43 @@
+body {
+	background-color: #353535;
+}
+
+*:not(.fa):not(h1):not(h2):not(h3) {
+	font-family: "Open Sans";
+}
+
+h1, h1, h3 {
+	font-family: "Merriweather", "serif" !important;
+	font-weight: 700;
+}
+
+h1 *:not(.fa),
+h2 *:not(.fa),
+h3 *:not(.fa) {
+	font-family: "Merriweather", "serif" !important;
+	font-weight: 700;
+}
+
+.landing {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url(https://images.unsplash.com/photo-1483992233021-1801812fdacb?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=);
+	background-size: cover;
+}
+
+.landing h1 {
+	text-align: center;
+	margin-top: 45vh;
+	color: white;
+	text-shadow: 	0px 0px 60px black,
+					0px 0px 120px black,
+					0px 0px 180px black;
+	font-size: 4em;
+}
+
+.landing p {
+	text-align: center;
+}

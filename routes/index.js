@@ -17,7 +17,7 @@ router.post('/login', passport.authenticate("local", {
 	successRedirect: "/posts",
 	failureRedirect: "/login",
 	successFlash: "Welcome!",
-	failureFlash: "Invalid"
+	failureFlash: "Invalid username or password."
 }), function(req, res) {});
 
 router.get('/signup', middleware.isAdmin, function(req, res) {

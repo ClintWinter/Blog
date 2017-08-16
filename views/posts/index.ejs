@@ -14,9 +14,13 @@
 		<div class="thumbnail">
 			<a href="/posts/<%=post.id%>"><img class="img-responsive" src="<%=post.thumbnail%>" alt=""></a>
 			<div class="caption">
+				<% if (currentUser) { %>
 				<h3 class="title"><a href="/posts/<%=post.id%>"><%=post.title%></a></h3>
 				<p class="date"><%=post.created.toDateString()%></p>
 				<p class="body"><%-post.body.slice(0,50)%></p>
+				<% } else { %>
+				<h3 class="title"><%=post.created.toDateString()%></h3>
+				<% } %>
 				<hr>
 				<p class="creator text-success"><%=post.author.username%></p>
 			</div>
